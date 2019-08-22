@@ -267,7 +267,7 @@ ifeq ($(HOST_OS),darwin)
 endif
 
 ifeq ($(TARGET_KERNEL_MODULES),)
-    TARGET_KERNEL_MODULES := INSTALLED_KERNEL_MODULES
+    TARGET_KERNEL_MODULES := $(KERNEL_OUT)/.no_external_modules
 endif
 
 KERNEL_ADDITIONAL_CONFIG_OUT := $(KERNEL_OUT)/.additional_config
